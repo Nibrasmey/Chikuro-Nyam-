@@ -1086,183 +1086,35 @@ textarea.ef__input { resize: vertical; min-height: 70px; }
   }
 }
 
-/* =================================
-   RESPONSIVE WEBSITE CHIKURO NYAM
-================================= */
-
-/* Pengaturan dasar */
-* {
-    box-sizing: border-box;
-}
-
-html {
-    width: 100%;
-    overflow-x: hidden;
-    scroll-behavior: smooth;
-}
-
-body {
-    width: 100%;
-    max-width: 100%;
-    margin: 0;
-    overflow-x: hidden;
-}
-
-img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-}
-
-button,
-input,
-textarea,
-select {
-    max-width: 100%;
-    font: inherit;
-}
-
-/* Container utama */
-.container {
-    width: min(100% - 40px, 1200px);
-    margin-inline: auto;
-}
-
-/* Gambar produk */
-.product-list {
-    display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: 24px;
-}
-
-.product-card {
-    min-width: 0;
-    width: 100%;
-}
-
-.product-card img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-}
-
-/* Tablet */
-@media screen and (max-width: 992px) {
-
-    .container {
-        width: calc(100% - 32px);
-    }
-
-    .product-list {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-        gap: 18px;
-    }
-
-    h1 {
-        font-size: clamp(28px, 5vw, 40px);
-    }
-}
-
-/* HP ukuran besar */
+/* PERBAIKAN KHUSUS TAMPILAN HP */
 @media screen and (max-width: 768px) {
 
-    .container {
-        width: calc(100% - 28px);
+    html, body {
+        max-width: 100%;
+        overflow-x: hidden;
     }
 
-    .product-list {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 14px;
+    header, .navbar, nav {
+        max-width: 100%;
+        box-sizing: border-box;
     }
 
-    h1 {
-        font-size: clamp(25px, 7vw, 34px);
-    }
-
-    h2 {
-        font-size: clamp(21px, 5vw, 28px);
-    }
-
-    p {
-        font-size: 14px;
-        line-height: 1.6;
-    }
-
-    section {
-        padding-top: 35px;
-        padding-bottom: 35px;
-    }
-
-    .hero {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .hero img {
-        width: 100%;
-        max-width: 400px;
-        margin-inline: auto;
-    }
-}
-
-/* HP ukuran kecil */
-@media screen and (max-width: 480px) {
-
-    .container {
-        width: calc(100% - 24px);
-    }
-
-    .product-list {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 10px;
-    }
-
-    h1 {
-        font-size: 25px;
-    }
-
-    h2 {
-        font-size: 20px;
-    }
-
-    h3 {
-        font-size: 16px;
-    }
-
-    p {
-        font-size: 13px;
-    }
-
-    button {
-        padding: 10px 14px;
-        font-size: 13px;
-    }
-
-    .product-card {
-        border-radius: 12px;
-    }
-}
-
-/* HP sangat kecil */
-@media screen and (max-width: 360px) {
-
-    .container {
-        width: calc(100% - 20px);
-    }
-
-    .product-list {
+    .navbar {
+        padding-left: 12px;
+        padding-right: 12px;
         gap: 8px;
     }
 
-    h1 {
-        font-size: 22px;
+    .navbar img,
+    .logo {
+        max-width: 65%;
+        height: auto;
     }
 
-    h2 {
-        font-size: 18px;
-    }
-
-    .product-card {
-        font-size: 12px;
+    .menu-toggle,
+    .hamburger,
+    .menu-icon {
+        flex-shrink: 0;
+        margin-right: 0;
     }
 }
