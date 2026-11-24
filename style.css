@@ -1071,3 +1071,17 @@ textarea.ef__input { resize: vertical; min-height: 70px; }
     height: 75px;
   }
 }
+@media screen and (max-width: 768px) {
+  .container {
+    width: 100%;
+    padding: 15px;
+  }
+
+  .product-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+}
